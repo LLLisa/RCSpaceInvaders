@@ -23,6 +23,8 @@ const invaders = [
   twofive,
 ];
 
+//invaders------------------------------
+
 let currentX = 0,
   currentY = 0;
 currentTimeout = 0;
@@ -90,3 +92,18 @@ const animation = async (array) => {
 
 positions(invaders);
 animation();
+
+//shooter------------------------------
+const shooter = document.getElementById('shooter');
+let shooterX = 45;
+shooter.style.marginLeft = `${shooterX}%`;
+document.addEventListener('keydown', (ev) => {
+  if (ev.key === 'ArrowLeft' && shooterX > 5) {
+    shooterX -= 10;
+    shooter.style.marginLeft = `${shooterX}%`;
+  }
+  if (ev.key === 'ArrowRight' && shooterX < 95) {
+    shooterX += 10;
+    shooter.style.marginLeft = `${shooterX}%`;
+  }
+});

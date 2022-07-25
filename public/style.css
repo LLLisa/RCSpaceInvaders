@@ -1,9 +1,19 @@
 body{
-    color: blue;
+
+}
+
+#shootercontainer {
+    position: absolute;
+    bottom: 3rem;
+    width: 90%;
 }
 
 .invader {
     font-size: 2.5rem;
+}
+
+#shooter {
+    font-size:3rem;
 }
 
 #youdied {
