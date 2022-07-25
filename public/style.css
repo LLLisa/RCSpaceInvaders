@@ -1,0 +1,55 @@
+body{
+    color: blue;
+}
+
+.top0left0 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.top0left20 {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+.top0left40 {
+    position: absolute;
+    top: 0%;
+    left: 40%;
+}
+.top0left60 {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+}
+.top0left80 {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+}
+.top10left0 {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+.top10left20 {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.top10left40 {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+.top10left60 {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+.top10left80 {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+}

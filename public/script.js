@@ -1,0 +1,21 @@
+const oneone = document.getElementById('oneone');
+const onetwo = document.getElementById('onetwo');
+const onethree = document.getElementById('onethree');
+const onefour = document.getElementById('onefour');
+const onefive = document.getElementById('onefive');
+const twoone = document.getElementById('twoone');
+const twotwo = document.getElementById('twotwo');
+const twothree = document.getElementById('twothree');
+const twofour = document.getElementById('twofour');
+const twofive = document.getElementById('twofive');
+
+oneone.classList.add('top0left0');
+onetwo.classList.add('top0left20');
+onethree.classList.add('top0left40');
+onefour.classList.add('top0left60');
+onefive.classList.add('top0left80');
+twoone.classList.add('top10left0');
+twotwo.classList.add('top10left20');
+twothree.classList.add('top10left40');
+twofour.classList.add('top10left60');
+twofive.classList.add('top10left80');
