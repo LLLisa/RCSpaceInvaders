@@ -48,6 +48,7 @@ const moveRight = (x = 0, y = 0) => {
       positions(invaders, x, y);
       currentY = y;
       y += 3;
+      // console.log(oneone);
     }, i * frameDelay);
   }
 };
@@ -95,15 +96,40 @@ animation();
 
 //shooter------------------------------
 const shooter = document.getElementById('shooter');
-let shooterX = 45;
-shooter.style.marginLeft = `${shooterX}%`;
-document.addEventListener('keydown', (ev) => {
-  if (ev.key === 'ArrowLeft' && shooterX > 5) {
-    shooterX -= 10;
-    shooter.style.marginLeft = `${shooterX}%`;
+let shooterY = 45;
+shooter.style.marginLeft = `${shooterY}%`;
+
+const handleShoot = (originY) => {
+  const bullet = document.createElement('h1');
+  bullet.innerText = '|';
+  bullet.classList = 'bullet';
+  document.body.appendChild(bullet);
+  bullet.style.left = `${originY}%`;
+  bullet.style.top = '80%';
+  bulletPath(bullet, originY);
+};
+
+const bulletPath = (bullet, bulletY) => {
+  let bulletX = 80;
+  for (let i = 0; i < 10; i++) {
+    setTimeout(() => {
+      bullet.style.top = `${bulletX}%`;
+      bulletX -= 10;
+      if (bulletX < -10) bullet.remove();
+    }, i * frameDelay);
   }
-  if (ev.key === 'ArrowRight' && shooterX < 95) {
-    shooterX += 10;
-    shooter.style.marginLeft = `${shooterX}%`;
+};
+
+document.addEventListener('keydown', (ev) => {
+  if (ev.key === 'ArrowLeft' && shooterY > 5) {
+    shooterY -= 10;
+    shooter.style.marginLeft = `${shooterY}%`;
+  }
+  if (ev.key === 'ArrowRight' && shooterY < 95) {
+    shooterY += 10;
+    shooter.style.marginLeft = `${shooterY}%`;
+  }
+  if (ev.key === 'ArrowUp') {
+    handleShoot(shooterY);
   }
 });

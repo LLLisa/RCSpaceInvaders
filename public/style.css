@@ -1,5 +1,14 @@
 body{
+    background-color: black;
+}
 
+
+.invader {
+    font-size: 2.5rem;
+}
+
+.deadinvader {
+    opacity: 10%;    
 }
 
 #shootercontainer {
@@ -8,17 +17,18 @@ body{
     width: 90%;
 }
 
-.invader {
-    font-size: 2.5rem;
-}
-
 #shooter {
     font-size:3rem;
 }
 
+.bullet {
+    position: absolute;
+    right: 0;
+}
+
 #youdied {
     position: absolute;
-    top:45%;
+    top:40%;
     left:33%;
     color: red;
     font-size: 4rem;
